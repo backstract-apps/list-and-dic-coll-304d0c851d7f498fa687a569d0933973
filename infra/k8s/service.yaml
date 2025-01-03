@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: list-and-dic-coll-304d0c851d7f498fa687a569d0933973-srv
+spec:
+  selector:
+    app: list-and-dic-coll-304d0c851d7f498fa687a569d0933973
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9012
+  type: ClusterIP

@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: list-and-dic-coll-304d0c851d7f498fa687a569d0933973-depl
+  labels:
+    app: list-and-dic-coll-304d0c851d7f498fa687a569d0933973
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: list-and-dic-coll-304d0c851d7f498fa687a569d0933973
+  template:
+    metadata:
+      labels:
+        app: list-and-dic-coll-304d0c851d7f498fa687a569d0933973
+    spec:
+      containers:
+        - name: list-and-dic-coll-304d0c851d7f498fa687a569d0933973
+          image: 216084506783.dkr.ecr.ap-south-1.amazonaws.com/backstract_apps:list-and-dic-coll-304d0c851d7f498fa687a569d0933973
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9012
